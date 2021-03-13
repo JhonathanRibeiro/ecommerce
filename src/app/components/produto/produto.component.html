@@ -1,0 +1,22 @@
+<ng-container *ngFor="let prod of produtos" >
+<mat-card class="produto">
+    <mat-card-header>
+        <mat-card-title>{{prod.nome}}</mat-card-title>
+        <mat-card-subtitle>{{prod.marca}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="imagem" src="{{prod.imagem}}" alt="{{prod.nome}}">
+    <mat-card-content>
+        <div style="color: #43a047;font-weight: bold;" fxLayout="row" fxLayoutGap="8px" 
+        fxLayoutAlign="end center">
+            <mat-icon>monetization_on</mat-icon>
+            <span>{{prod.preco | currency:"BRL"}}</span>
+        </div>
+    </mat-card-content> 
+    <mat-card-footer>
+        <div fxLayout="row" fxLayoutGap="8px" 
+        fxLayoutAlign="center">
+        <button mat-raised-button class="success">Comprar</button>
+        </div>
+    </mat-card-footer>
+</mat-card>
+</ng-container>

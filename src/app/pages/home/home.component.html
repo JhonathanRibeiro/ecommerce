@@ -1,0 +1,29 @@
+<div class="home-bar mat-elevation-z6">
+    <div class="acao" fxLayout="row" fxLayoutAlign="end center">
+        <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px" class="titulo">
+            <mat-icon>shopping_cart</mat-icon>
+            <span>E-commerce</span>
+        </div>
+
+        <div *ngIf="isAuthenticated; else elseBlock">
+            <button [routerLink]="['/admin']" mat-raised-button>Admin</button>
+        </div>
+        <ng-template #elseBlock>
+            <button [routerLink]="['/login']" mat-raised-button>Login</button>
+        </ng-template>
+    </div>
+
+    <div class="pesquisa">
+        <input class="mat-elevation-z2" placeholder="O que você procura?" type="search" #search
+            (keydown)="onKeydown($event)" autocomplete="off" [(ngModel)]="inputSearch">
+    </div>
+
+</div>
+
+<div class="container">
+    <app-produto [produtos]="produtos"></app-produto>
+</div>
+
+<div class="footer">
+    Desenvolvido por <b>Jhonathan Ribeiro</b> &copy;2021
+</div>

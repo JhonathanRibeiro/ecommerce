@@ -1,0 +1,42 @@
+.menu-btn {
+    margin-right: 16px;
+}
+
+.menu{
+    width: 300px;
+}
+
+mat-drawer-content{
+    padding: 0 16px;
+}
+
+.link-activated{
+    color: #3f51b5!important;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content{
+    flex-grow: 1;
+    background-color: #f1f1f1;
+}
+
+mat-icon{
+    margin-right: 24px;
+}
+
+.link{
+    display: flex!important;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(0, 0, 0, .72);
+}
+
+mat-toolbar{
+    border-bottom: 1px solid #dcdcdc;
+    min-height: 64px!important;
+}

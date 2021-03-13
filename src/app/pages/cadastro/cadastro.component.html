@@ -1,0 +1,43 @@
+<form class="auth-container" [formGroup]="form">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Cadastro</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <!-- Nome -->
+            <mat-form-field [appearance]="'outline'">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="nome" type="text">
+                <mat-error>{{nome.errors | erro}}</mat-error>
+            </mat-form-field>
+
+            <!-- Email -->
+            <mat-form-field [appearance]="'outline'">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="email" required placeholder="seunome@examplo.com" type="email">
+                <mat-error>{{email.errors | erro}}</mat-error>
+            </mat-form-field>
+
+            <!-- Senha -->
+            <mat-form-field [appearance]="'outline'">
+                <mat-label>Senha</mat-label>
+                <input matInput formControlName="senha" required placeholder="Crie uma senha" type="password">
+                <mat-error>{{senha.errors | erro}}</mat-error>
+            </mat-form-field>
+
+            <!-- Confirmar senha -->
+            <mat-form-field [appearance]="'outline'">
+                <mat-label>Confirmar senha</mat-label>
+                <input matInput formControlName="confirmarSenha" required placeholder="Digite novamente sua senha" type="password">
+                <mat-error>{{confirmarSenha.errors | erro}}</mat-error>
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <div fxLayout fxLayoutGap="16px">
+                <button mat-raised-button [disabled]="form.invalid || loading" (click)="cadastrar()" color="primary">Cadastrar</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</form>

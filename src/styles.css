@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@keyframes tela-in{
+    from{
+        transform: translateX(32px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tela{
+    animation-name: tela-in;
+    animation-duration: 400ms;
+    width: 100%;
+    max-width: 800px;
+    margin: 16px auto;
+}
+
+.no-margin{
+    margin: 0!important;
+}
+
+.tela mat-card-actions{
+    margin: 0!important;
+}
+
+.auth-container{
+    height: 100%;
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container mat-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-container mat-form-field{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.auth-container mat-card-content{
+    padding-top: 32px;
+}
+
+.auth-container mat-card-actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mat-menu-item {
+    align-items: center;
+}
+.imagem {
+    width: calc(100% + 32px)!important;
+    margin: 0 -16px 16px -16px!important;
+    height: calc(55% + 20px)!important;
+    object-fit: contain!important;
+}
+button.success {
+    background: #43a047;
+    color: #fff;
+}

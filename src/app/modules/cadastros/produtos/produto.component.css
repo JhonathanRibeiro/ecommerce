@@ -1,0 +1,13 @@
+.no-margin {
+  margin: 0px !important;
+}
+
+.header-padrao {
+  align-items: center;
+}
+
+.container-padrao {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}

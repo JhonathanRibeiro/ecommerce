@@ -1,0 +1,44 @@
+<div class="main">
+    <mat-toolbar fxLayout="row" color="primary">
+        <button (click)="drawer.toggle()" class="menu-btn" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span fxFlex>E-commerce</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button (click)="sair()" mat-menu-item>
+                <mat-icon>close</mat-icon>
+                <span fxFlex>Sair do sistema</span>
+            </button>
+        </mat-menu>
+    </mat-toolbar>
+    <mat-drawer-container class="main-content">
+        <mat-drawer [opened]="true" mode="side" class="menu" #drawer>
+            <mat-nav-list>
+                <mat-list-item>
+                    <a matLine class="link" [routerLink]="['/home']" routerLinkActive="link-activated">
+                        <mat-icon>home</mat-icon>
+                        <span>Home</span>
+                    </a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a matLine class="link" [routerLink]="['/admin/produto']" routerLinkActive="link-activated">
+                        <mat-icon>shopping_bag</mat-icon>
+                        <span>Produtos</span>
+                    </a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a matLine class="link" [routerLink]="['/admin/empresa']" routerLinkActive="link-activated">
+                        <mat-icon>account_balance</mat-icon>
+                        <span>Empresa</span>
+                    </a>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

@@ -1,0 +1,29 @@
+<form [formGroup]="form" #fr="ngForm">
+
+  <app-crud [form]="fr" titulo="Empresa" [api]="service">
+    <div fxLayout="column" fxLayoutGap="16px">
+
+      <mat-form-field fxFlex [appearance]="'outline'">
+        <mat-label>Razão Social</mat-label>
+        <input matInput type="text" formControlName="razaoSocial">
+        <mat-error>{{razaoSocial.errors | erro}}</mat-error>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutGap="16px">
+
+        <mat-form-field fxFlex [appearance]="'outline'">
+          <mat-label>Nome fantasia</mat-label>
+          <input matInput type="text" formControlName="fantasia">
+          <mat-error>{{fantasia.errors | erro}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field [appearance]="'outline'">
+          <mat-label>CNPJ</mat-label>
+          <input matInput type="text" formControlName="cnpj">
+          <mat-error>{{cnpj.errors | erro}}</mat-error>
+        </mat-form-field>
+
+      </div>
+    </div>
+  </app-crud>
+</form>
