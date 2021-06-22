@@ -21,7 +21,6 @@ Para mais detalhes abra a documento do [Angular](https://angular.io/).
 
 
 Página home:
-![image](https://user-images.githubusercontent.com/37172038/123007866-46b5c100-d390-11eb-8a37-6603133590fb.png)
 ![image](https://user-images.githubusercontent.com/37172038/123007878-4c130b80-d390-11eb-99e1-de9f694d77a0.png)
 
 Página de cadastro de produtos
